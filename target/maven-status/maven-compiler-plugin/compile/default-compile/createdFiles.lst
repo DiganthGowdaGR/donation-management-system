@@ -1,3 +1,13 @@
+com\donation\patterns\strategy\MatchingContext.class
+com\donation\patterns\strategy\HighPriorityMatchingStrategy.class
+com\donation\patterns\strategy\MatchingStrategy.class
+com\donation\patterns\strategy\NormalMatchingStrategy.class
+com\donation\repository\RequestRepository.class
+com\donation\service\impl\RequestServiceImpl.class
 com\donation\config\SecurityConfig.class
+com\donation\model\Request.class
 com\donation\DonationApplication.class
+com\donation\service\RequestService.class
+com\donation\controller\RequestController.class
 com\donation\controller\HomeController.class
+com\donation\model\Donor.class

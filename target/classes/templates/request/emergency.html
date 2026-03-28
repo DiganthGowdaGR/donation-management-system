@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Requests - DonationMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="/">DonationMS</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h4>Emergency Requests
+            <small class="text-muted fs-6">SRN 823: Sharath Gowda GR</small>
+        </h4>
+        <p class="text-muted">
+            Showing CRITICAL and HIGH urgency requests only.
+            Strategy Pattern: High Priority Matching applied.
+        </p>
+        <hr>
+
+        <div th:if="${#lists.isEmpty(requests)}"
+             class="alert alert-success">
+            No emergency requests at this time.
+        </div>
+
+        <table class="table table-bordered table-hover"
+               th:if="${!#lists.isEmpty(requests)}">
+            <thead class="table-danger">
+                <tr>
+                    <th>#</th>
+                    <th>Patient ID</th>
+                    <th>Type</th>
+                    <th>Blood Type</th>
+                    <th>Urgency</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="r : ${requests}">
+                    <td th:text="${r.requestId}"></td>
+                    <td th:text="${r.patientId}"></td>
+                    <td th:text="${r.requestType}"></td>
+                    <td th:text="${r.bloodType}"></td>
+                    <td>
+                        <span class="badge bg-danger"
+                              th:text="${r.urgencyLevel}"></span>
+                    </td>
+                    <td th:text="${r.requestDate}"></td>
+                    <td th:text="${r.status}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/request/list" class="btn btn-outline-danger mt-3">
+            Back to All Requests
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
