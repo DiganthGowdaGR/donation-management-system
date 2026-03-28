@@ -1,0 +1,56 @@
+<!--
+ * SRN: PES2UG24CS823 - Sharath Gowda GR
+ * Home/landing page
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="layout/base :: content">
+<head>
+    <title>Home - Blood & Organ Donation Management System</title>
+</head>
+<body>
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Save Lives — Donate Blood & Organs</h1>
+        <p class="lead">Join our mission to make a difference.</p>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Total Donors</h5>
+                    <p class="card-text display-6">1,234</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Total Patients</h5>
+                    <p class="card-text display-6">567</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Donations Made</h5>
+                    <p class="card-text display-6">890</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Requests Pending</h5>
+                    <p class="card-text display-6">12</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="/donor/register" class="btn btn-danger btn-lg mx-2">Register as Donor</a>
+        <a href="/patient/register" class="btn btn-outline-danger btn-lg mx-2">Request Blood/Organ</a>
+    </div>
+</div>
+</body>
+</html>
